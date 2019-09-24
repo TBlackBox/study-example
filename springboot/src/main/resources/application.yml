@@ -1,0 +1,23 @@
+server:
+  port: 80
+
+
+
+spring:
+  redis:
+    host: 152.32.192.200
+
+  rabbitmq:
+    host: 192.168.0.110
+    username: guest
+    password: guest
+    #默认端口 5672
+    port: 5672
+#  elasticsearch:
+#    jest:
+#      uris: https://localhost:9200
+#  data:
+#    elasticsearch:
+#      #节点名字
+#      cluster-name: elasticsearch
+#      cluster-nodes: 192.168.0.110:9300
