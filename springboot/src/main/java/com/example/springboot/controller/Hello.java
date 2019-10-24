@@ -7,9 +7,14 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class Hello {
 
+//    @Autowired
+//    TestMapper testMapper;
+
     @ResponseBody
     @RequestMapping("/test")
-    public String hello(){
-        return "你好";
+    public Object hello(){
+
+        return "hello";
+//        return testMapper.selectList();
     }
 }
