@@ -14,7 +14,7 @@
     <artifactId>cn.javafroum.netty</artifactId>
 
     <properties>
-        <netty-all.version>4.1.38.Final</netty-all.version>
+        <netty-all.version>4.1.42.Final</netty-all.version>
     </properties>
 
     <dependencies>
