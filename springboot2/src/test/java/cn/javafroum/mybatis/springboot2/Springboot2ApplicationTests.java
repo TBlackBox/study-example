@@ -19,11 +19,11 @@ public class Springboot2ApplicationTests {
     @Test
     public void contextLoads() {
 
-        InputStream inp = new InputStream();
-        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inp);
-        SqlSession sqlSession =  sqlSessionFactory.openSession();
-        LogMapper mapper = sqlSession.getMapper(LogMapper.class);
-        mapper.selectLogList();
+//        InputStream inp = new InputStream();
+//        SqlSessionFactory sqlSessionFactory = new SqlSessionFactoryBuilder().build(inp);
+//        SqlSession sqlSession =  sqlSessionFactory.openSession();
+//        LogMapper mapper = sqlSession.getMapper(LogMapper.class);
+//        mapper.selectLogList();
     }
 
 }

@@ -12,6 +12,10 @@
 
     <groupId>netty</groupId>
     <artifactId>cn.javafroum.netty</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>../java-test</module>
+    </modules>
 
     <properties>
         <netty-all.version>4.1.38.Final</netty-all.version>
