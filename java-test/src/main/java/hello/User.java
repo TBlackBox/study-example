@@ -1,13 +1,11 @@
 package hello;
 
 public class User {
-
 	private String name;
 	private Integer age;
 	
 	public User() {
 	}
-	
 	public User(String name, Integer age) {
 		super();
 		this.name = name;
@@ -25,5 +23,4 @@ public class User {
 	public void setAge(Integer age) {
 		this.age = age;
 	}
-	
 }
