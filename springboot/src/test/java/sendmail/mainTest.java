@@ -1,4 +1,8 @@
-package com.example.springboot;
+package sendmail;
+
+import java.io.File;
+
+import javax.mail.internet.MimeMessage;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -8,9 +12,6 @@ import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.test.context.junit4.SpringRunner;
-
-import javax.mail.internet.MimeMessage;
-import java.io.File;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest

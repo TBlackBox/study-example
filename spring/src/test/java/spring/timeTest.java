@@ -1,6 +1,5 @@
 package spring;
 
-import java.text.SimpleDateFormat;
 import java.time.Instant;
 import java.time.LocalDateTime;
 
@@ -8,18 +7,18 @@ import org.junit.Test;
 
 public class timeTest {
 
-	//´´½¨Ê±¼ä
+	//åˆ›å»ºæ—¶é—´
 	@Test
 	public void test() {
 		
-		//Í¨¹ınow()»ñÈ¡
+		//é€šè¿‡now()è·å–
 		LocalDateTime localDateTime = LocalDateTime.now();
-		//Í¨¹ıof()»ñÈ¡  Êä³ö     2020-01-13T12:41:00.007
+		//é€šè¿‡of()è·å–  è¾“å‡º     2020-01-13T12:41:00.007
 		System.out.println(localDateTime);
 		
-		//of(²ÎÊı) ÓĞ¶à¸ö¾²Ì¬·½·¨£¬¿ÉÒÔ¸ù¾İ×Ô¼ºµÄĞèÒªÑ¡Ôñ
+		//of(å‚æ•°) æœ‰å¤šä¸ªé™æ€æ–¹æ³•ï¼Œå¯ä»¥æ ¹æ®è‡ªå·±çš„éœ€è¦é€‰æ‹©
 		LocalDateTime localDateTime2 = LocalDateTime.of(2020, 1, 21, 2, 21);
-		//Êä³ö   2020-01-21T02:21
+		//è¾“å‡º   2020-01-21T02:21
 		System.out.println(localDateTime2);
 		
 	}
@@ -27,101 +26,97 @@ public class timeTest {
 	@Test
 	public void plusTime() {
 		LocalDateTime localDateTime = LocalDateTime.now();
-		System.out.println("µ±Ç°Ê±¼ä£º"+localDateTime);
+		System.out.println("å½“å‰æ—¶é—´ï¼š"+localDateTime);
 		
 		/**
-		 * Ìí¼ÓÊ±¼ä
+		 * æ·»åŠ æ—¶é—´
 		 */
-		//×¢Òâ  ÕâÀïĞèÒªÒ»¸öĞÂ±äÁ¿À´½ÓÊÕ  LocalDateTime ÊÇ²»¿É±äµÄÊµÀı
-		//»¹ÓĞºÜ¶à·½·¨  ÕâÀïÖ»ÑİÊ¾ÁËÌí¼ÓĞ¡Ê±  ·Ö  Ìì Ãë  ºÁÃë  ÄÉÃë  ÖÜÕâĞ©¶¼¿ÉÒÔ
+		//æ³¨æ„  è¿™é‡Œéœ€è¦ä¸€ä¸ªæ–°å˜é‡æ¥æ¥æ”¶  LocalDateTime æ˜¯ä¸å¯å˜çš„å®ä¾‹
+		//è¿˜æœ‰å¾ˆå¤šæ–¹æ³•  è¿™é‡Œåªæ¼”ç¤ºäº†æ·»åŠ å°æ—¶  åˆ†  å¤© ç§’  æ¯«ç§’  çº³ç§’  å‘¨è¿™äº›éƒ½å¯ä»¥
 		LocalDateTime localDateTime1 = localDateTime.plusHours(2);
-		System.out.println("Ìí¼Ó2¸öĞ¡Ê±ºòµÄÊ±¼ä:"+localDateTime1);
+		System.out.println("æ·»åŠ 2ä¸ªå°æ—¶å€™çš„æ—¶é—´:"+localDateTime1);
 		
 		/**
-		 * ¼õÉÙÊ±¼ä
+		 * å‡å°‘æ—¶é—´
 		 */
-		//ÔÚµ±Ç°Ê±¼ä¼õÉÙ2¸öÔÂ  ÕâÀïÑİÊ¾µÄÊÇÔÂ  µ±È»»¹ÓĞÄê Ìì  Ãë ·ÖµÈµÈ  ¾ßÌå¿´api
+		//åœ¨å½“å‰æ—¶é—´å‡å°‘2ä¸ªæœˆ  è¿™é‡Œæ¼”ç¤ºçš„æ˜¯æœˆ  å½“ç„¶è¿˜æœ‰å¹´ å¤©  ç§’ åˆ†ç­‰ç­‰  å…·ä½“çœ‹api
 		LocalDateTime localDateTime2 =  localDateTime.minusMonths(2);
-		//Êä³ö   µ±Ç°Ê±¼ä¼õÉÙ2¸öÔÂµÄÊ±¼ä£º2019-11-13T13:04:37.199
-		System.out.println("µ±Ç°Ê±¼ä¼õÉÙ2¸öÔÂµÄÊ±¼ä£º" + localDateTime2);
+		//è¾“å‡º   å½“å‰æ—¶é—´å‡å°‘2ä¸ªæœˆçš„æ—¶é—´ï¼š2019-11-13T13:04:37.199
+		System.out.println("å½“å‰æ—¶é—´å‡å°‘2ä¸ªæœˆçš„æ—¶é—´ï¼š" + localDateTime2);
 		
 		/**
-		 * Ö¸¶¨Ê±¼ä
+		 * æŒ‡å®šæ—¶é—´
 		 */
-		//ÕâÀïÖ¸¶¨ÔÂÖĞµÄÌì  µ±È»  »¹ÄÜÖ¸¶¨ Äê ÔÂ  ÈÕÕâĞ©  
+		//è¿™é‡ŒæŒ‡å®šæœˆä¸­çš„å¤©  å½“ç„¶  è¿˜èƒ½æŒ‡å®š å¹´ æœˆ  æ—¥è¿™äº›  
 		LocalDateTime localDateTime3 = localDateTime.withDayOfMonth(2);
-		//Êä³ö ½«¸ÄÔÂµÄÌìÖ¸¶¨Îª2ºÅ£º2020-01-02T13:10:29.856
-		System.out.println("½«¸ÄÔÂµÄÌìÖ¸¶¨Îª2ºÅ£º"+localDateTime3);
+		//è¾“å‡º å°†æ”¹æœˆçš„å¤©æŒ‡å®šä¸º2å·ï¼š2020-01-02T13:10:29.856
+		System.out.println("å°†æ”¹æœˆçš„å¤©æŒ‡å®šä¸º2å·ï¼š"+localDateTime3);
 	}
 	
-	//»ñÈ¡Ê±¼ä
+	//è·å–æ—¶é—´
 	@Test
 	public void getTime() {
 		LocalDateTime localDateTime = LocalDateTime.now();
-		System.out.println("Ê±¼ä£º"+localDateTime);
+		System.out.println("æ—¶é—´ï¼š"+localDateTime);
 		
-		System.out.println("µÃµ½ÔÂÖĞµÄÌì£º"+localDateTime.getDayOfMonth());
-		System.out.println("µÃµ½ÄêÖĞµÄÌì£º"+localDateTime.getDayOfYear());
-		System.out.println("µÃµ½Ğ¡Ê±£º"+localDateTime.getHour());
-		System.out.println("µÃµ½·ÖÖÓÊı£º"+localDateTime.getMinute());
-		System.out.println("µÃµ½¼¸ÔÂ£¨Öµ£©£º"+localDateTime.getMonthValue());
-		System.out.println("µÃµ½ÄÉÃë£º"+localDateTime.getNano());
-		System.out.println("µÃµ½Ãë£º"+localDateTime.getSecond());
-		System.out.println("µÃµ½ĞÇÆÚ¼¸£¨Ó¢ÎÄ£©£º"+localDateTime.getDayOfWeek());
-		System.out.println("µÃµ½ÔÂ·İ£¨Ó¢ÎÄ£©£º"+localDateTime.getMonth());
-		//Êä³ö
-//		Ê±¼ä£º2020-01-20T15:02:39.535
-//		µÃµ½ÔÂÖĞµÄÌì£º20
-//		µÃµ½ÄêÖĞµÄÌì£º20
-//		µÃµ½Ğ¡Ê±£º15
-//		µÃµ½·ÖÖÓÊı£º2
-//		µÃµ½¼¸ÔÂ£¨Öµ£©£º1
-//		µÃµ½ÄÉÃë£º535000000
-//		µÃµ½Ãë£º39
-//		µÃµ½ĞÇÆÚ¼¸£¨Ó¢ÎÄ£©£ºMONDAY
-//		µÃµ½ÔÂ·İ£¨Ó¢ÎÄ£©£ºJANUARY
+		System.out.println("å¾—åˆ°æœˆä¸­çš„å¤©ï¼š"+localDateTime.getDayOfMonth());
+		System.out.println("å¾—åˆ°å¹´ä¸­çš„å¤©ï¼š"+localDateTime.getDayOfYear());
+		System.out.println("å¾—åˆ°å°æ—¶ï¼š"+localDateTime.getHour());
+		System.out.println("å¾—åˆ°åˆ†é’Ÿæ•°ï¼š"+localDateTime.getMinute());
+		System.out.println("å¾—åˆ°å‡ æœˆï¼ˆå€¼ï¼‰ï¼š"+localDateTime.getMonthValue());
+		System.out.println("å¾—åˆ°çº³ç§’ï¼š"+localDateTime.getNano());
+		System.out.println("å¾—åˆ°ç§’ï¼š"+localDateTime.getSecond());
+		System.out.println("å¾—åˆ°æ˜ŸæœŸå‡ ï¼ˆè‹±æ–‡ï¼‰ï¼š"+localDateTime.getDayOfWeek());
+		System.out.println("å¾—åˆ°æœˆä»½ï¼ˆè‹±æ–‡ï¼‰ï¼š"+localDateTime.getMonth());
+		//è¾“å‡º
+//		æ—¶é—´ï¼š2020-01-20T15:02:39.535
+//		å¾—åˆ°æœˆä¸­çš„å¤©ï¼š20
+//		å¾—åˆ°å¹´ä¸­çš„å¤©ï¼š20
+//		å¾—åˆ°å°æ—¶ï¼š15
+//		å¾—åˆ°åˆ†é’Ÿæ•°ï¼š2
+//		å¾—åˆ°å‡ æœˆï¼ˆå€¼ï¼‰ï¼š1
+//		å¾—åˆ°çº³ç§’ï¼š535000000
+//		å¾—åˆ°ç§’ï¼š39
+//		å¾—åˆ°æ˜ŸæœŸå‡ ï¼ˆè‹±æ–‡ï¼‰ï¼šMONDAY
+//		å¾—åˆ°æœˆä»½ï¼ˆè‹±æ–‡ï¼‰ï¼šJANUARY
 	}
 	
-	//±È½ÏÊ±¼ä
+	//æ¯”è¾ƒæ—¶é—´
 	@Test
 	public void compareTime() {
 		LocalDateTime localDateTime = LocalDateTime.now();
-		System.out.println("Ê±¼ä1£º" + localDateTime);
+		System.out.println("æ—¶é—´1ï¼š" + localDateTime);
 		LocalDateTime localDateTime2 = localDateTime.plusHours(2);
-		System.out.println("Ê±¼ä2£º" + localDateTime2);
+		System.out.println("æ—¶é—´2ï¼š" + localDateTime2);
 		
-		System.out.println("Ê±¼ä2 ÔÚÊ±¼ä1Ö®ºó£º" + localDateTime.isAfter(localDateTime2));
-		System.out.println("Ê±¼ä2 ÔÚÊ±¼ä1Ö®Ç°£º" + localDateTime.isBefore(localDateTime2));
-//		Ê±¼ä1£º2020-01-20T15:13:35.551
-//		Ê±¼ä2£º2020-01-20T17:13:35.551
-//		Ê±¼ä2 ÔÚÊ±¼ä1Ö®ºó£ºfalse
-//		Ê±¼ä2 ÔÚÊ±¼ä1Ö®Ç°£ºtrue
+		System.out.println("æ—¶é—´2 åœ¨æ—¶é—´1ä¹‹åï¼š" + localDateTime.isAfter(localDateTime2));
+		System.out.println("æ—¶é—´2 åœ¨æ—¶é—´1ä¹‹å‰ï¼š" + localDateTime.isBefore(localDateTime2));
+//		æ—¶é—´1ï¼š2020-01-20T15:13:35.551
+//		æ—¶é—´2ï¼š2020-01-20T17:13:35.551
+//		æ—¶é—´2 åœ¨æ—¶é—´1ä¹‹åï¼šfalse
+//		æ—¶é—´2 åœ¨æ—¶é—´1ä¹‹å‰ï¼štrue
 		
-		//isEqual()  ÅĞ¶ÏÊ±¼äÊÇ·ñÏàµÈ Êä³ö flase
+		//isEqual()  åˆ¤æ–­æ—¶é—´æ˜¯å¦ç›¸ç­‰ è¾“å‡º flase
 	    System.out.println(localDateTime.isEqual(localDateTime2)); 
 	}
 	
 	@Test
 	public void instant1() {
-		//Êä³ö µ±Ç°Ê±¼ä:2020-01-20T16:00:31.661
-		System.out.println("µ±Ç°Ê±¼ä:" + LocalDateTime.now()); 
-		Instant instant = Instant.now(); //Ä¬ÈÏÊ¹ÓÃ UTC Ê±Çø
-		// Êä³ö  instant£º2020-01-20T07:58:44.388Z   ÌØ±ğ×¢Òâ £º ÕâÀïµÄÊ±¼äºÍµ±Ç°Ê±¼äÏà²î8¸öĞ¡Ê±£¬ ÕâÀïÓÃµÄÊÇUTC Ê±¼ä
-		System.out.println("instant£º" + instant);
+		//è¾“å‡º å½“å‰æ—¶é—´:2020-01-20T16:00:31.661
+		System.out.println("å½“å‰æ—¶é—´:" + LocalDateTime.now()); 
+		Instant instant = Instant.now(); //é»˜è®¤ä½¿ç”¨ UTC æ—¶åŒº
+		// è¾“å‡º  instantï¼š2020-01-20T07:58:44.388Z   ç‰¹åˆ«æ³¨æ„ ï¼š è¿™é‡Œçš„æ—¶é—´å’Œå½“å‰æ—¶é—´ç›¸å·®8ä¸ªå°æ—¶ï¼Œ è¿™é‡Œç”¨çš„æ˜¯UTC æ—¶é—´
+		System.out.println("instantï¼š" + instant);
 		
-		//µÃµ½ÃëµÄÊ±¼ä´ê   Êä³ö  1579507124
+		//å¾—åˆ°ç§’çš„æ—¶é—´æ“   è¾“å‡º  1579507124
 		System.out.println(instant.getEpochSecond());
-		//µÃµ½´øºÁÃëµÄÊ±¼ä´ê  Êä³ö  1579507124388
+		//å¾—åˆ°å¸¦æ¯«ç§’çš„æ—¶é—´æ“  è¾“å‡º  1579507124388
 		System.out.println(instant.toEpochMilli());
-		//µÃµ½ÄÉÃë Êä³ö 388000000
+		//å¾—åˆ°çº³ç§’ è¾“å‡º 388000000
 		System.out.println(instant.getNano());
 	}
 	
 	@Test
 	public void instant2() {
-	
 	}
-	
-	}
-	
-}
+}	

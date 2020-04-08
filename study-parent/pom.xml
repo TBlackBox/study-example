@@ -9,9 +9,9 @@
     <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>../spring</module>
-        <module>../netty-client</module>
-        <module>../netty</module>
+        <module>../study-spring</module>
+        <module>../study-java</module>
+        <module>../study-springboot</module>
     </modules>
 
 
