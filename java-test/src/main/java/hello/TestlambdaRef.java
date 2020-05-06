@@ -19,7 +19,10 @@ public class TestlambdaRef {
 		
 		Stream<Double> stream = Stream.generate(Math::random);
 		stream.forEach(System.out::println);
+	 	
 	}
+	
+
 	
 	//数组引用
 	public static void test4() {
@@ -42,7 +45,7 @@ public class TestlambdaRef {
 		Supplier<User> sup = () -> new User();
 		User user = sup.get();
 		
-		//改造一哈赛  调用的是无参数够着器 Supplier是不穿参数的，只有返回值
+		//改造 一哈赛  调用的是无参数够着器 Supplier是不穿参数的，只有返回值
 		Supplier<User> sup1 = User::new;
 		User user1 = sup1.get();
 		
