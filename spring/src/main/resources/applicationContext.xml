@@ -10,20 +10,20 @@
     <!--<context:component-scan base-package="hello"></context:component-scan>-->
 
     <!--通过set方法注入-->
-    <bean id="hello" class="hello.Hello">
+   <!--  <bean id="hello" class="hello.Hello">
         <property name="name" value="李四"/>
-        <!-- additional collaborators and configuration for this bean go here -->
-    </bean>
+        additional collaborators and configuration for this bean go here
+    </bean> -->
 
     <!--通过构造函数注入bean-->
-    <bean id="user" class="hello.User"  >
-        <!--通过类型来指定构造器参数，如果写类型，默认结算位置，也可以通共index 来指定位置-->
+    <!-- <bean id="user" class="hello.User"  >
+        通过类型来指定构造器参数，如果写类型，默认结算位置，也可以通共index 来指定位置
         <constructor-arg value="张三" type="java.lang.String"></constructor-arg>
-    </bean>
+    </bean> -->
 
     <!--继承 user-->
-    <bean id="user1"  parent="user">
-    </bean>
+ <!--    <bean id="user1"  parent="user">
+    </bean> -->
 
     <!--把类说明为抽象类  只用与继承，不能实例化  添加这个abstract熟悉-->
     <bean id="user2" abstract="true"></bean>
@@ -45,5 +45,22 @@
 
     <!--<bean id="hello6" class="hello.Hello" init-method="init1" destroy-method="destory1">
     </bean>-->
+    
+    <context:component-scan base-package="aop"/>
+
+    <!-- 配置一个代理 -->
+    <bean id="userDaoProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="interfaces" value="aop.IUserDao"/> <!-- 需要代理的接口 -->
+        <property name="target" ref="userDaoImpl"/>       <!-- 接口实现类 -->
+        <property name="interceptorNames">                 <!-- 拦截器名称（也就是增强类名称，Spring Bean 的 id） -->
+            <list>
+                <value>stateAroundAdvice</value>
+            </list>
+        </property>
+        
+        <!-- 如果只有一个增强的话 可以直接这样写  -->
+        <!-- <property name="interceptorNames" value="stateAroundAdvice"></property> -->
+    </bean>
+    
 
 </beans>
