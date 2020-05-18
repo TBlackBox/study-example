@@ -13,6 +13,7 @@
         <module>../study-java</module>
         <module>../study-springboot</module>
         <module>../study-netty</module>
+        <module>../study-sprinboot-websocket</module>
     </modules>
 
 

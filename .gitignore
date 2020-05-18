@@ -1,4 +1,9 @@
 /.idea
-/netty/target
-/java-test/target
-/spring/target
+/*/target
+/*/*/target
+/*/.settings
+/*/*/.settings
+/*/*.project
+/*/*.project
+/*/.settings
+/*.project
