@@ -7,7 +7,7 @@
 
    <!-- <context:property-placeholder location="classpath:user.properties"/>-->
 
-    <!--<context:component-scan base-package="hello"></context:component-scan>-->
+    <!-- <context:component-scan base-package="hello"></context:component-scan> -->
 
     <!--通过set方法注入-->
    <!--  <bean id="hello" class="hello.Hello">
@@ -46,25 +46,26 @@
     <!--<bean id="hello6" class="hello.Hello" init-method="init1" destroy-method="destory1">
     </bean>-->
     
-    <context:component-scan base-package="aop"/>
+    <context:component-scan base-package="strategy"/>
+    <context:component-scan base-package="spring"/>
 
     <!-- 配置一个代理 -->
-    <bean id="userDaoProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
-        <property name="interfaces" value="aop.IAdminDao"/> <!-- 需要代理的接口 -->
-        <property name="target" ref="userDaoImpl"/>       <!-- 接口实现类 -->
-        <property name="interceptorNames">                 <!-- 拦截器名称（也就是增强类名称，Spring Bean 的 id） -->
+  <!--   <bean id="userDaoProxy" class="org.springframework.aop.framework.ProxyFactoryBean">
+        <property name="interfaces" value="aop.IAdminDao"/> 需要代理的接口
+        <property name="target" ref="userDaoImpl"/>       接口实现类
+        <property name="interceptorNames">                 拦截器名称（也就是增强类名称，Spring Bean 的 id）
             <list>
-                <!-- <value>stateAroundAdvice</value>
-                <value>throwAdvice</value> -->
+                <value>stateAroundAdvice</value>
+                <value>throwAdvice</value>
                 <value>introAdvice</value>
             </list>
         </property>
-        <!-- 代理目标类（默认为 false，代理接口） -->
+        代理目标类（默认为 false，代理接口）
         <property name="proxyTargetClass" value="true"/> 
         
-        <!-- 如果只有一个增强的话 可以直接这样写  -->
-        <!-- <property name="interceptorNames" value="stateAroundAdvice"></property> -->
-    </bean>
+        如果只有一个增强的话 可以直接这样写 
+        <property name="interceptorNames" value="stateAroundAdvice"></property>
+    </bean> -->
     
 
 </beans>

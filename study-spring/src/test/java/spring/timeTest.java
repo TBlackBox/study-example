@@ -1,15 +1,22 @@
 package spring;
 
 import java.time.Instant;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 
 import org.junit.Test;
 
 public class timeTest {
 
+	@Test
+	public void testLocalDate() { 
+		System.out.println(LocalDate.now().format(DateTimeFormatter.BASIC_ISO_DATE));
+	}
+	
 	//创建时间
 	@Test
-	public void test() {
+	public void test() { 
 		
 		//通过now()获取
 		LocalDateTime localDateTime = LocalDateTime.now();
