@@ -1,5 +1,6 @@
 package log;
 
+import java.util.Map;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -13,5 +14,7 @@ public class JDKLogger {
 		logger.finer("JDK自带的FINER日志");
 		logger.finest("JDK自带的FINEST日志");
 		logger.log(Level.WARNING, "JDK自带的LOF日志");
+		
+		Map<K, V>
 	}
 }
