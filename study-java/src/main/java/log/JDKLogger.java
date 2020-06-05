@@ -14,7 +14,5 @@ public class JDKLogger {
 		logger.finer("JDK自带的FINER日志");
 		logger.finest("JDK自带的FINEST日志");
 		logger.log(Level.WARNING, "JDK自带的LOF日志");
-		
-		Map<K, V>
 	}
 }
