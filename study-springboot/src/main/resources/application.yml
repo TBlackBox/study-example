@@ -1,5 +1,28 @@
 server:
-  port: 80
+  port: 443
+  ssl:
+         #证书的路径.
+    key-store: classpath:ssl/natapp.javaweb.io.p12
+         #证书密码，请修改为您自己证书的密码
+    key-store-password: 123456
+         #秘钥库类型
+    keyStoreType: PKCS12
+     
+
+  #ssl:
+         #证书的路径.
+    #key-store: classpath:ssl/keystore.p12
+         #证书密码，请修改为您自己证书的密码
+    #key-store-password: 123456
+          #秘钥库类型
+    #keyStoreType: PKCS12
+          #证书别名
+    #keyAlias: tomcat
+    #ciphers: TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA256,TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA384,TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA,TLS_ECDHE_RSA_WITH_RC4_128_SHA,TLS_RSA_WITH_AES_128_CBC_SHA256,TLS_RSA_WITH_AES_128_CBC_SHA,TLS_RSA_WITH_AES_256_CBC_SHA256,TLS_RSA_WITH_AES_256_CBC_SHA,SSL_RSA_WITH_RC4_128_SHA
+
+logging:
+  level: 
+    root: DEBUG
 
 
 spring:
