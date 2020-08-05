@@ -1,12 +1,12 @@
 server:
-  port: 443
-  ssl:
+  port: 80
+#  ssl:
          #证书的路径.
-    key-store: classpath:ssl/natapp.javaweb.io.p12
+#    key-store: classpath:ssl/natapp.javaweb.io.p12
          #证书密码，请修改为您自己证书的密码
-    key-store-password: 123456
+#    key-store-password: 123456
          #秘钥库类型
-    keyStoreType: PKCS12
+#    keyStoreType: PKCS12
      
 
   #ssl:

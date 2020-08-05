@@ -1,4 +1,4 @@
-package cn.javafroum.mybatis.springboot2;
+package cn.javafroum.mybatis.springboot2.okhttp;
 
 import java.io.IOException;
 import java.util.HashMap;
@@ -9,11 +9,12 @@ import org.junit.runner.RunWith;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import cn.javafroum.mybatis.springboot2.SpringbootApplication;
 import cn.javafroum.mybatis.springboot2.util.OkHttpUtil;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest(classes = SpringbootApplication.class,webEnvironment=SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class TestOkHttp {
+public class SpringbootTestOkHttp {
 
 	@Test
 	public void testGet() throws IOException {
