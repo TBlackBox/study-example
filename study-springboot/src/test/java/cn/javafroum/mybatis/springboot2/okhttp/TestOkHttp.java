@@ -13,6 +13,7 @@ import okhttp3.Callback;
 import okhttp3.FormBody;
 import okhttp3.Headers;
 import okhttp3.MediaType;
+import okhttp3.MultipartBody;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
@@ -22,13 +23,11 @@ import okio.BufferedSink;
 public class TestOkHttp {
 
 	/*
-	 * 基本的get请求
+	 * 基本的get请求(同步) 在调用线程接受请求
 	 */
 	@Test
 	public void testOkHttpGet() throws IOException {
-		
 		String url = "http://127.0.0.1/okhttp/get?username=王麻子";
-		
 		OkHttpClient client = new OkHttpClient();
 		Request request = new Request.Builder()
 			      .url(url)
@@ -39,6 +38,32 @@ public class TestOkHttp {
 		    //返回值:测试GET成功,用户名：王麻子
 		    System.out.println("返回值:" + retValue);
 		  }
+	}
+	
+	
+	/**
+	 * get 同步请求 在子线程接收请求
+	 * 
+	 */
+	@Test
+	public void testOkHttpGet1() {
+		String url = "http://127.0.0.1/okhttp/get?username=王麻子";
+		OkHttpClient okHttpClient = new OkHttpClient();
+		final Request request = new Request.Builder()
+		        .url(url)
+		        .build();
+		final Call call = okHttpClient.newCall(request);
+		new Thread(new Runnable() {
+		    @Override
+		    public void run() {
+		        try {
+		            Response response = call.execute();
+		            System.out.println("run: " + response.body().string());
+		        } catch (IOException e) {
+		            e.printStackTrace();
+		        }
+		    }
+		}).start();
 	}
 	
 	/**
@@ -64,7 +89,6 @@ public class TestOkHttp {
 		        System.out.println("相应数据: " + response.body().string());
 		    }
 		});
-		
 		System.out.println("请求结束");
 	}
 	
@@ -206,5 +230,48 @@ public class TestOkHttp {
 		        System.out.println("onResponse: " + response.body().string());
 		    }
 		});
+	}
+	
+	/**
+	 * POST方式提交分块请求
+	 *	MultipartBody 可以构建复杂的请求体，与HTML文件上传形式兼容。
+	 *多块请求体中每块请求都是一个请求体，可以定义自己的请求头。
+	 *这些请求头可以用来描述这块请求，例如它的 Content-Disposition 。
+	 *如果 Content-Length 和 Content-Type 可用的话，他们会被自动添加到请求头中。
+	 */
+	private static final String IMGUR_CLIENT_ID = "...";
+	private static final MediaType MEDIA_TYPE_PNG = MediaType.parse("image/png");
+	@Test
+	public void postMultipartBody() {
+		OkHttpClient client = new OkHttpClient();
+	    // Use the imgur image upload API as documented at https://api.imgur.com/endpoints/image
+	    MultipartBody body = new MultipartBody.Builder("AaB03x")
+	            .setType(MultipartBody.FORM)
+	            .addPart(
+	                    Headers.of("Content-Disposition", "form-data; name=\"title\""),
+	                    RequestBody.create(null, "Square Logo"))
+	            .addPart(
+	                    Headers.of("Content-Disposition", "form-data; name=\"image\""),
+	                    RequestBody.create(MEDIA_TYPE_PNG, new File("website/static/logo-square.png")))
+	            .build();
+
+	    Request request = new Request.Builder()
+	            .header("Authorization", "Client-ID " + IMGUR_CLIENT_ID)
+	            .url("https://127.0.0.1/image")
+	            .post(body)
+	            .build();
+
+	    Call call = client.newCall(request);
+	    call.enqueue(new Callback() {
+	        @Override
+	        public void onFailure(Call call, IOException e) {
+	        }
+
+	        @Override
+	        public void onResponse(Call call, Response response) throws IOException {
+	            System.out.println(response.body().string());
+
+	        }
+	    });
 	}
 }
