@@ -41,6 +41,33 @@ public class TestOkHttp {
 		  }
 	}
 	
+	/**
+	 * 异步get请求
+	 */
+	@Test
+	public void testOkHttpGetAsyn() {
+		String url = "http://127.0.0.1/okhttp/get?username=王麻子";
+		OkHttpClient okHttpClient = new OkHttpClient();
+		final Request request = new Request.Builder()
+		        .url(url)
+		        .get()//默认就是GET请求，可以不写
+		        .build();
+		Call call = okHttpClient.newCall(request);
+		call.enqueue(new Callback() {
+		    @Override
+		    public void onFailure(Call call, IOException e) {
+		       System.out.println("请求失败");
+		    }
+
+		    @Override
+		    public void onResponse(Call call, Response response) throws IOException {
+		        System.out.println("相应数据: " + response.body().string());
+		    }
+		});
+		
+		System.out.println("请求结束");
+	}
+	
 	
 	
 	/**
