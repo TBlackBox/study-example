@@ -58,15 +58,15 @@ public class OkHttpUtil{
      */
     public static String get(String url, Map<String, String> queries) throws IOException  {
         StringBuffer sb = new StringBuffer(url);
-        queries.forEach((k,v) ->{
-        	boolean firstFlag = true;
+        boolean firstFlag = true;
+        for (String k : queries.keySet()) {
         	if (firstFlag) {
-                sb.append("?" + k + "=" + v);
+                sb.append("?" + k + "=" + queries.get(k));
                 firstFlag = false;
             } else {
-                sb.append("&" + k + "=" + v);
+                sb.append("&" + k + "=" + queries.get(k));
             }
-        });
+		}
 
         Request request = new Request.Builder()
                 .url(sb.toString())

@@ -27,7 +27,7 @@ public class TestOkHttp {
 	 */
 	@Test
 	public void testOkHttpGet() throws IOException {
-		String url = "http://127.0.0.1/okhttp/get?username=王麻子";
+		String url = "https://api.cp888.cloud/merchantdata/pull/order?agency=true&endTime=2020-10-30%2011:25:02&lastOrderId=0&merchantAccount=boyu&pageSize=1000&sign=9c75592f053f7b8135b9da1f7daca637&startTime=2020-10-30%2010:55:02";
 		OkHttpClient client = new OkHttpClient();
 		Request request = new Request.Builder()
 			      .url(url)
