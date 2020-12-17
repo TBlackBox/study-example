@@ -1,5 +1,6 @@
 package jdk;
 import java.io.InputStream.*;
+import java.util.HashMap;
 
 class A {}
 
