@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>PayloadContent</key>
+	<array>
+	  	<dict>
+	  		<key>PayloadContent</key>
+	        <dict>
+	            <key>URL</key>
+	            <string>https://natapp.javaweb.io/ssl</string>
+	            <key>DeviceAttributes</key>
+	            <array>
+	                <string>UDID</string>
+	                <string>IMEI</string>
+	                <string>ICCID</string>
+	                <string>VERSION</string>
+	                <string>PRODUCT</string>
+	            </array>
+	        </dict>
+	        <key>PayloadOrganization</key>
+	        <string>dev.skyfox.org</string>
+	        <key>PayloadDisplayName</key>
+	        <string>查询设备UDID</string>
+	        <key>PayloadVersion</key>
+	        <integer>1</integer>
+	        <key>PayloadUUID</key>
+	        <string>3C4DC7D2-E475-3375-489C-0BB8D737A653</string>
+	        <key>PayloadIdentifier</key>
+	        <string>dev.skyfox.profile-service</string>
+	        <key>PayloadDescription</key>
+	        <string>本文件仅用来获取设备ID</string>
+	        <key>PayloadType</key>
+	        <string>Profile Service</string>
+	    </dict>
+		<dict>
+			<key>FullScreen</key>
+			<false/>
+			<key>IsRemovable</key>
+			<true/>
+			<key>Label</key>
+			<string>好123</string>
+			<key>PayloadDescription</key>
+			<string>配置 Web Clip 设置</string>
+			<key>PayloadDisplayName</key>
+			<string>Web Clip</string>
+			<key>PayloadIdentifier</key>
+			<string>com.apple.webClip.managed.0AD9F070-784C-43FE-B80E-C0012000A7F9</string>
+			<key>PayloadType</key>
+			<string>com.apple.webClip.managed</string>
+			<key>PayloadUUID</key>
+			<string>0AD9F070-784C-43FE-B80E-C0012000A7F9</string>
+			<key>PayloadVersion</key>
+			<integer>1</integer>
+			<key>Precomposed</key>
+			<false/>
+			<key>URL</key>
+			<string>https://www.hao123.com</string>
+		</dict>
+	</array>
+	<key>PayloadDisplayName</key>
+	<string>未命名</string>
+	<key>PayloadIdentifier</key>
+	<string>muronghengdeMacBook-Pro.C81624DE-0679-4ADC-B2FB-2A8A359E21A8</string>
+	<key>PayloadRemovalDisallowed</key>
+	<false/>
+	<key>PayloadType</key>
+	<string>Configuration</string>
+	<key>PayloadUUID</key>
+	<string>D7513932-DEFD-4CA8-8BC2-D7120F514423</string>
+	<key>PayloadVersion</key>
+	<integer>1</integer>
+</dict>
+</plist>
