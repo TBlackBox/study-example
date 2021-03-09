@@ -10,8 +10,8 @@
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>study-spring</groupId>
-    <artifactId>spring</artifactId>
+    <name>study-spring</name>
+    <artifactId>study-spring</artifactId>
 
     <dependencies>
         <dependency>

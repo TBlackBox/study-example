@@ -3,7 +3,7 @@ package cn.javafroum.mybatis.springboot2.okhttp;
 import java.io.File;
 import java.io.IOException;
 
-import org.junit.Test;
+import org.junit.jupiter.api.Test;
 import org.springframework.lang.Nullable;
 
 import com.alibaba.fastjson.JSONObject;
