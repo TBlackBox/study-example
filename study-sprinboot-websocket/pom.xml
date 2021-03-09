@@ -5,8 +5,8 @@
     <artifactId>study-parent</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <relativePath>../study-parent/pom.xml</relativePath>
-  </parent> 
-  <groupId>study-sprinboot-websocket</groupId>
+  </parent>
+
   <artifactId>study-sprinboot-websocket</artifactId>
   <packaging>pom</packaging>
   
@@ -17,4 +17,5 @@
   	<module>study-websocket-tio</module>
   	<module>study-websocket-stomp</module>
   </modules>
+
 </project>
