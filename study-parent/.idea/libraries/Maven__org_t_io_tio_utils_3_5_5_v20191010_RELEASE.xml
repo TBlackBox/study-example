@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Maven: org.t-io:tio-utils:3.5.5.v20191010-RELEASE">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/../../../mavenku/.m2/repository/org/t-io/tio-utils/3.5.5.v20191010-RELEASE/tio-utils-3.5.5.v20191010-RELEASE.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$PROJECT_DIR$/../../../mavenku/.m2/repository/org/t-io/tio-utils/3.5.5.v20191010-RELEASE/tio-utils-3.5.5.v20191010-RELEASE-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/../../../mavenku/.m2/repository/org/t-io/tio-utils/3.5.5.v20191010-RELEASE/tio-utils-3.5.5.v20191010-RELEASE-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

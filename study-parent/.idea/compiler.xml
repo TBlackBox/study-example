@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="study-websocket-tio" />
+        <module name="study-springboot" />
+        <module name="study-websocket-spring" />
+        <module name="study-java" />
+        <module name="study-websocket-annotation" />
+        <module name="study-netty" />
+        <module name="study-websocket-stomp" />
+        <module name="spring" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="spring" target="1.8" />
+      <module name="study-java" target="1.8" />
+      <module name="study-netty" target="1.8" />
+      <module name="study-parent" target="1.5" />
+      <module name="study-sprinboot-websocket" target="1.5" />
+      <module name="study-springboot" target="1.8" />
+      <module name="study-websocket-annotation" target="1.8" />
+      <module name="study-websocket-spring" target="1.8" />
+      <module name="study-websocket-stomp" target="1.8" />
+      <module name="study-websocket-tio" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="study-springboot" options="-parameters" />
+      <module name="study-websocket-annotation" options="-parameters" />
+      <module name="study-websocket-spring" options="-parameters" />
+      <module name="study-websocket-stomp" options="-parameters" />
+      <module name="study-websocket-tio" options="-parameters" />
+    </option>
+  </component>
+</project>
