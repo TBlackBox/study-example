@@ -1,0 +1,47 @@
+#使用默认的数据源
+spring:
+  datasource:
+    # 使用druid 数据源
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://81.71.31.163:3306/db_test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2b8&allowMultiQueries=true
+    username: db_test
+    password: db_test
+    type: com.alibaba.druid.pool.DruidDataSource
+    #<!-- 配置监控统计拦截的filters -->
+    filters: stat
+
+
+
+  slave:
+    # 使用druid 数据源
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://81.71.31.163:3306/db_test2?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2b8&allowMultiQueries=true
+    username: db_test2
+    password: db_test2
+
+
+#druid:
+#  type: com.alibaba.druid.pool.DruidDataSource
+#  datasource:
+#    # 使用druid 数据源
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://81.71.31.163:3306/db_test?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2b8&allowMultiQueries=true
+#    username: db_test
+#    password: db_test
+#
+#
+#
+#  slave:
+#    # 使用druid 数据源
+#    driver-class-name: com.mysql.cj.jdbc.Driver
+#    url: jdbc:mysql://81.71.31.163:3306/db_test2?useUnicode=true&characterEncoding=UTF-8&serverTimezone=GMT%2b8&allowMultiQueries=true
+#    username: db_test2
+#    password: db_test2
+
+
+#mybatis:
+#  config-location: classpath:mybatis-config.xml
+##  这个是将xml 文件放到代码里面的配置
+##  mapper-locations: classpath*:cn/yongzhi/**/mapper/*.xml
+#  type-aliases-package: cn.yongzhi.example.db.domain
+#  mapper-locations: classpath*:mapping/*.xml

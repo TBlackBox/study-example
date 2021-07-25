@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+    <settings>
+        <!-- 自动转换实体的属性和列名的规则（驼峰-下划线） -->
+        <setting name="mapUnderscoreToCamelCase" value="true" />
+        <!-- 默认枚举处理 -->
+        <setting name="defaultEnumTypeHandler" value="org.apache.ibatis.type.EnumOrdinalTypeHandler"/>
+        <!-- 自动映射，发现未知列（或者未知属性类型）抛出异常
+        <setting name="autoMappingUnknownColumnBehavior" value="FAILING"/>
+        -->
+        <!-- 自动映射，任何复杂的结果集 -->
+        <!-- <setting name="autoMappingBehavior" value="FULL"/>  -->
+    </settings>
+</configuration>
