@@ -23,6 +23,7 @@
         <module>study-netty</module>
         <module>study-sprinboot-websocket</module>
         <module>study-springboot-db</module>
+        <module>study-spring-security</module>
     </modules>
 
     <properties>
