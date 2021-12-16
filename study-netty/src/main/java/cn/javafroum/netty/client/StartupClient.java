@@ -14,7 +14,7 @@ public class StartupClient {
         ChannelFuture future = null;
         try{
             client = new SocketClient();
-            future = client.doRequest("localhost", 9090, new ClientHandler());
+            future = client.doRequest("101.37.172.188", 9090, new ClientHandler());
 
             Scanner s = null;
             while(true){

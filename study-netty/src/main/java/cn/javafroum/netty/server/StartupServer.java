@@ -9,7 +9,7 @@ public class StartupServer {
         SocketServer server = null;
         try{
             server = new SocketServer();
-            future = server.doAccept(9090,new DiscardServerHandler());
+            future = server.doAccept(5001,new DiscardServerHandler());
             System.out.println("socket 服务端开始运行！");
             // 关闭连接的。
             future.channel().closeFuture().sync();

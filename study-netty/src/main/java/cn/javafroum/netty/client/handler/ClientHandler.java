@@ -14,7 +14,7 @@ public class ClientHandler extends ChannelInboundHandlerAdapter {
 			ByteBuf readBuffer = (ByteBuf) msg;
 			byte[] tempDatas = new byte[readBuffer.readableBytes()];
 			readBuffer.readBytes(tempDatas);
-			System.out.println("from server : " + new String(tempDatas, "UTF-8"));
+			System.out.println("来自服务端的消息: " + new String(tempDatas, "UTF-8"));
 		}finally{
 			// 用于释放缓存。避免内存溢出
 			ReferenceCountUtil.release(msg);
